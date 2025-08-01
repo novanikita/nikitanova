@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Путешествия — Никита Нова</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/settings.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/ids.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/project.css" />
+  </head>
+
+  <body class="ids">
+    <header>
+      <div class="logo">
+        <a href="index.html">← Никита Нова</a>
+      </div>
+      <div class="nav">
+        <div class="nav-item">
+          <span>Путешествия</span>
+        </div>        
+      </div>
+    </header>
+  </div>
+    <main>
+
+      <div class="ids__wrapper L">
+
+        <h1>2025</h1>
+        
+        <div class="projects-grid">
+          <div class="projects-grid-item">
+            <a class="project-promo-link" href="">
+              <div class="project-promo" style="background-image: url('images/projects-promo/soon-cover.avif');">
+                <h2>Крондштадт</h2>
+              </div>
+            </a>
+          </div>
+          <div class="projects-grid-item">
+            <a class="project-promo-link" href="kazan.html">
+              <div class="project-promo" style="background-image: url('images/travels/covers/kazan-cover.jpg');">
+                <h2>Казань</h2>
+              </div>
+            </a>
+          </div>
+          <div class="projects-grid-item">
+            <a class="project-promo-link" href="pushkin.html">
+              <div class="project-promo" style="background-image: url('images/travels/covers/pushlin-cover.jpeg');">
+                <h2>Пушкин</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="ids__space XL"></div> 
+        <h1>2024</h1>
+        <div class="projects-grid">
+          <div class="projects-grid-item">
+            <a class="project-promo-link" href="veliky-novgorod.html">
+              <div class="project-promo" style="background-image: url('images/travels/covers/veliky-novgorod-cover.jpg');">
+                <h2>Великий Новгород</h2>
+              </div>
+            </a>
+          </div>
+
+          <!--<div class="projects-grid-item">
+            <a class="project-promo-link" href="">
+              <div class="project-promo" style="background-image: url('images/projects-promo/soon-cover.avif');">
+                <h2>Нижний Новгород</h2>
+              </div>
+            </a>
+          </div>
+          <div class="projects-grid-item">
+            <a class="project-promo-link" href="">
+              <div class="project-promo" style="background-image: url('images/projects-promo/soon-cover.avif');">
+                <h2>Выборг</h2>
+              </div>
+            </a>
+          </div>-->
+        </div>
+    </main>
+    <footer>
+      <div><a href="about.html">Обо мне</a></div>
+      <div><a href="https://t.me/nikita_nova">Написать</a></div>
+      <div><a href="mailto:i@nikitanova.ru">i@nikitanova.ru</a></div>
+      <div><a href="https://t.me/+Z1nNM8tF_6E1YTli">Телеграм</a></div>
+      <div><a href="https://www.youtube.com/@Nikitanova">Ютуб</a></div>
+    </footer>
+    <script>
+      let observer = new IntersectionObserver((elements)=>{
+        elements.forEach((el) => {
+          if(el.intersectionRatio > .3) {
+            el.target.classList.remove("sleep");
+          } else {
+            el.target.classList.add("sleep");
+          }
+        })
+      }, {threshold: [0, .5]});
+
+      document.querySelectorAll('.awake').forEach(el => {
+        observer.observe(el);
+      })
+    </script>
+
+
+  </body>
+
+</html>
