@@ -286,8 +286,7 @@ footer {
 
 .card
   {
-    background-color:rgba(200, 236, 255, 1);
-    //color: rgba(0, 154, 238, 1);
+    background-color:rgba(228, 246, 255, 1);
     border-radius: 1em;
     padding: 1.5em 1.5em 1em 1.5em;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
