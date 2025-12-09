@@ -250,30 +250,43 @@ footer {
     width: 12em;
 }
 
-.table {
+/*.table {
     position: relative;
     overflow: scroll;
     font-size: 1em;
     border-bottom: 1px solid rgba(var(--ids__text-RGB), 0.15);
 
+    display: table;
+    border-collapse: separate;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-color: gray;
+
     thead {
+
+        display: table-header-group;
+        vertical-align: middle;
+        unicode-bidi: isolate;
+        border-color: inherit;
+
       tr {
         th {
           text-align: left;
           padding-left: 0em;
           position: sticky;
-          background: #ededed;
+          background: #ffffffff;
           top: 0;
+          
         }
       }
     }
     tbody {
       tr {
-        transition: background-color 0.25s ease;
+        transition: background-color 1.5s ease;
 
         &:hover {
-          background-color: #d4d4d4;
-          transition: background-color 0.1s ease;
+          background-color: #edededff;
+          transition: background-color 0s ease;
         }
 
         td {
@@ -282,7 +295,47 @@ footer {
         }
       }
     }
-  }
+  }*/
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1em;
+}
+
+/* Заголовок */
+.custom-table thead th {
+  text-align: left;
+  padding: 0.75em 1em;
+  position: sticky;
+  top: 0;
+  background: #ffffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Строки */
+.custom-table tbody tr {
+  transition: background-color 1.5s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* линия-разделитель */
+}
+
+/* Hover эффект без белых полос */
+.custom-table tbody tr:hover {
+  background-color: #edededff;
+  transition: background-color 0s ease;
+}
+
+/* Ячейки */
+.custom-table td {
+  padding: 0.75em 1em;
+  vertical-align: top;
+}
+
 
 .card
   {
