@@ -16,16 +16,7 @@
   </head>
 
   <body class="ids">
-    <header>
-      <div class="logo">
-        <a href="index.html">← Никита Нова</a>
-      </div>
-      <div class="nav">
-        <div class="nav-item">
-          <span>Путешествия</span>
-        </div>        
-      </div>
-    </header>
+    <div id="site-header"></div>
   </div>
     <main>
 
@@ -36,21 +27,21 @@
         <div class="projects-grid">
           <div class="projects-grid-item">
             <a class="project-promo-link" href="">
-              <div class="project-promo" style="background-image: url('images/projects-promo/soon-cover.avif');">
+              <div class="project-promo" data-bg="images/projects-promo/soon-cover.avif">
                 <h2>Крондштадт</h2>
               </div>
             </a>
           </div>
           <div class="projects-grid-item">
             <a class="project-promo-link" href="kazan.html">
-              <div class="project-promo" style="background-image: url('images/travels/covers/kazan-cover.jpg');">
+              <div class="project-promo" data-bg="images/travels/covers/kazan-cover.jpg">
                 <h2>Казань</h2>
               </div>
             </a>
           </div>
           <div class="projects-grid-item">
             <a class="project-promo-link" href="pushkin.html">
-              <div class="project-promo" style="background-image: url('images/travels/covers/pushlin-cover.jpeg');">
+              <div class="project-promo" data-bg="images/travels/covers/pushlin-cover.jpeg">
                 <h2>Пушкин</h2>
               </div>
             </a>
@@ -61,7 +52,7 @@
         <div class="projects-grid">
           <div class="projects-grid-item">
             <a class="project-promo-link" href="veliky-novgorod.html">
-              <div class="project-promo" style="background-image: url('images/travels/covers/veliky-novgorod-cover.jpg');">
+              <div class="project-promo" data-bg="images/travels/covers/veliky-novgorod-cover.jpg">
                 <h2>Великий Новгород</h2>
               </div>
             </a>
@@ -69,14 +60,14 @@
 
           <!--<div class="projects-grid-item">
             <a class="project-promo-link" href="">
-              <div class="project-promo" style="background-image: url('images/projects-promo/soon-cover.avif');">
+              <div class="project-promo" data-bg="images/projects-promo/soon-cover.avif">
                 <h2>Нижний Новгород</h2>
               </div>
             </a>
           </div>
           <div class="projects-grid-item">
             <a class="project-promo-link" href="">
-              <div class="project-promo" style="background-image: url('images/projects-promo/soon-cover.avif');">
+              <div class="project-promo" data-bg="images/projects-promo/soon-cover.avif">
                 <h2>Выборг</h2>
               </div>
             </a>
@@ -107,6 +98,9 @@
     </script>
 
 
+      <script src="js/include-header.js"></script>
+      <script src="js/performance.js"></script>
+      <script src="js/lang-switcher.js"></script>
   </body>
 
 </html>

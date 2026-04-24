@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Notes about design</title>
+<link href="../images/icon.png" rel="icon" type="image/x-icon"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../css/colors.css" rel="stylesheet">
+<link href="../css/normalize.css" rel="stylesheet"/>
+<link href="../css/settings.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<link href="../css/ids.css" rel="stylesheet"/>
+<link href="../css/gallery.css" rel="stylesheet"/>
+<link href="../css/project.css" rel="stylesheet"/>
+</head>
+<body class="ids">
+<div id="site-header"></div>
+
+<main>
+<div class="ids__wrapper L">
+<div class="projects-grid">
+<div class="projects-grid-item L">
+<a class="project-promo-link" href="how-did-designers-come-about.html">
+<div class="video-promo" data-bg="../images/article-cover/how-did-designers-come-about-cover.jpg">
+<h2>Where did so many designers come from?</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="designers-and-customers.html">
+<div class="video-promo" data-bg="../images/article-cover/a-6.avif">
+<h2>Designers and customers</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="beauty.html">
+<div class="video-promo" data-bg="../images/article-cover/a-9.avif">
+<h2>Beauty</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="showcase-designers-work.html">
+<div class="video-promo" data-bg="../images/article-cover/a-1.avif">
+<h2>How can designers show their work?</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="secret-of-productivity.html">
+<div class="video-promo" data-bg="../images/article-cover/a-2.avif">
+<h2>The main secret to productivity</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="answers-to-6-popular-questions.html">
+<div class="video-promo" data-bg="../images/article-cover/a-3.avif">
+<h2>Answers to 8 popular questions</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="write-every-day.html">
+<div class="video-promo" data-bg="../images/article-cover/a-4.avif">
+<h2>Why write every day?</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="people-are-dumb.html">
+<div class="video-promo" data-bg="../images/article-cover/a-5.avif">
+<h2>"People are stupid" (no)</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="remember-the-name.html">
+<div class="video-promo" data-bg="../images/article-cover/a-6.avif">
+<h2>Why do we find it difficult to remember names?</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="when-you-can-say-bad.html">
+<div class="video-promo" data-bg="../images/article-cover/a-7.avif">
+<h2>When can you say “bad”? And when not to</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="How-to-properly-arrange-a-book-spine.html">
+<div class="video-promo" data-bg="../images/article-cover/a-8.avif">
+<h2>How to properly design a book spine?</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="symbol-of-progress.html">
+<div class="video-promo" data-bg="../images/article-cover/a-9.avif">
+<h2>Why is the letter “I” a symbol of progress?</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="colored-lights-on-trams.html">
+<div class="video-promo" data-bg="../images/article-cover/a-10.avif">
+<h2>Why do trams in St. Petersburg need colored lights?</h2>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- <div class="ids__wrapper wide">
+        <div class="section">
+          <ids-gallery>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.avif">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.avif" alt="bulbasaur" loading="lazy" decoding="async">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.avif"
+                 data-pswp-width="960"
+                 data-pswp-height="960"
+              >
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.avif" alt="ivysaur" loading="lazy" decoding="async">
+              </a>
+            </figure>
+
+          </ids-gallery>
+        </div>
+        <div class="ids__space XL"></div>
+      </div> -->
+</main>
+<footer>
+<div><a href="about.html">About me</a></div>
+<div><a href="https://t.me/nikita_nova">Write</a></div>
+<div><a href="mailto:i@nikitanova.ru">i@nikitanova.ru</a></div>
+<div><a href="https://t.me/+Z1nNM8tF_6E1YTli">Telegram</a></div>
+<div><a href="https://www.youtube.com/@Nikitanova">YouTube</a></div>
+</footer>
+<script>
+      let observer = new IntersectionObserver((elements)=>{
+        elements.forEach((el) => {
+          if(el.intersectionRatio > .3) {
+            el.target.classList.remove("sleep");
+          } else {
+            el.target.classList.add("sleep");
+          }
+        })
+      }, {threshold: [0, .5]});
+
+      document.querySelectorAll('.awake').forEach(el => {
+        observer.observe(el);
+      })
+    </script>
+<script src="../js/include-header.js"></script>
+<script src="../js/performance.js"></script>
+<script src="../js/lang-switcher.js"></script>
+</body>
+</html>

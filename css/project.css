@@ -47,27 +47,39 @@ header {
 
 /* MAIN PAGE */
 
-#background-video {
+#background-canvas {
     position: fixed;
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
     width: 100%;
     height: 100%;
     z-index: -1;
-    object-fit: cover;
-    object-position: 50% 50%;
     display: block;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
 
     @media screen and (max-width: 768px) {
         top: 25vh;
         bottom: 0em;
-        min-height: auto;
         height: 75vh;
-        object-position: 40% 50%;
     }
 
+}
+
+#background-video::-webkit-media-controls {
+    display: none !important;
+}
+
+#background-video {
+    position: fixed;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .main-page-header {
@@ -78,12 +90,16 @@ header {
     }
 }
 
+.main-page-header a {
+    text-decoration: none;
+}
+
 /* PORTFOLIO PAGE */
 
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    --gap: 1em;
+    --gap: 0.2em;
     gap: var(--gap);
 
     @media screen and (max-width: 768px) {
@@ -122,11 +138,7 @@ a.project-promo-link {
     text-decoration: none;
 
     & h2 {
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 0.15em;
-        text-decoration-color: rgba(255, 255, 255, 0.3);
-        transition: text-decoration 0.5s ease;
+        text-decoration: none;
         @media screen and (max-width: 768px) {
             font-size: 1.1em;
             }
@@ -136,10 +148,6 @@ a.project-promo-link {
         transition: filter 0s ease;
         filter: brightness(110%);
 
-        & h2 {
-            text-decoration-color: rgba(255, 255, 255, 0.7);
-            transition: text-decoration 0s ease;
-        }
     }
 }
 
@@ -247,7 +255,35 @@ footer {
 }
 
 .main-page-nav {
-    width: 12em;
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    text-align: center;
+}
+
+.main-page-nav a {
+    text-decoration: none;
+}
+
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+}
+
+.language-switcher a {
+    display: inline-block;
+    padding: 0.05em 0.2em;
+    border: 0.05em solid transparent;
+    border-radius: 0.1em;
+    line-height: 1;
+}
+
+.language-switcher a.is-active {
+    border-color: currentColor;
 }
 
 /*.table {

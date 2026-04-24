@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Nikita Nova</title>
+<link href="../images/icon.png" rel="icon" type="image/x-icon"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../css/colors.css" rel="stylesheet">
+<link href="../css/normalize.css" rel="stylesheet"/>
+<link href="../css/settings.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<link href="../css/ids.css" rel="stylesheet"/>
+<link href="../css/gallery.css" rel="stylesheet"/>
+<link href="../css/project.css" rel="stylesheet"/>
+</head>
+<body class="ids">
+<div id="site-header"></div>
+<main>
+<canvas aria-hidden="true" id="background-canvas"></canvas>
+<video aria-hidden="true" autoplay="" disablepictureinpicture="" disableremoteplayback="" id="background-video" loop="" muted="" playsinline="" tabindex="-1" webkit-playsinline="">
+<source src="../video/website-video.mp4" type="video/mp4"/>
+        Your browser does not support HTML5 video.
+      </video>
+</main>
+<script>
+      (function () {
+        const video = document.getElementById("background-video");
+        const canvas = document.getElementById("background-canvas");
+        const ctx = canvas.getContext("2d");
+        if (!video || !canvas || !ctx) return;
+
+        function getCanvasHeight(viewportHeight) {
+          return window.matchMedia("(max-width: 768px)").matches
+            ? viewportHeight * 0.75
+            : viewportHeight;
+        }
+
+        function getCanvasTop(viewportHeight) {
+          return window.matchMedia("(max-width: 768px)").matches
+            ? viewportHeight * 0.25
+            : 0;
+        }
+
+        function resizeCanvas() {
+          const width = window.innerWidth;
+          const viewportHeight = window.innerHeight;
+          const height = getCanvasHeight(viewportHeight);
+
+          canvas.width = width;
+          canvas.height = height;
+          canvas.style.top = getCanvasTop(viewportHeight) + "px";
+        }
+
+        function drawCoverFrame() {
+          if (!video.videoWidth || !video.videoHeight) return;
+
+          const scale = Math.max(
+            canvas.width / video.videoWidth,
+            canvas.height / video.videoHeight
+          );
+
+          const drawWidth = video.videoWidth * scale;
+          const drawHeight = video.videoHeight * scale;
+          const offsetX = (canvas.width - drawWidth) / 2;
+          const offsetY = (canvas.height - drawHeight) / 2;
+
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(video, offsetX, offsetY, drawWidth, drawHeight);
+        }
+
+        function renderLoop() {
+          drawCoverFrame();
+          requestAnimationFrame(renderLoop);
+        }
+
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+        video.addEventListener("loadeddata", function () {
+          video.play().catch(function () {});
+          renderLoop();
+        });
+      })();
+    </script>
+<script src="../js/include-header.js"></script>
+<script src="../js/performance.js"></script>
+<script src="../js/lang-switcher.js"></script>
+</body>
+</html>

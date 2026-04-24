@@ -17,19 +17,7 @@
   </head>
 
   <body class="ids">
-    <header>
-      <div class="logo">
-        <a href="index.html">← Никита Нова</a>
-      </div>
-      <div class="nav">
-        <div class="nav-item">
-          <a href="articles.html">Статья</a>
-        </div>
-        <div class="nav-item">
-          <p>Про восприятие</p>
-        </div>
-      </div>
-    </header>
+    <div id="site-header"></div>
 
   </div>
     <main>
@@ -55,7 +43,7 @@
           <ids-gallery>
             <figure>
               <a href="images/projects/chicha/chicha_1.jpg">
-                <img src="images/projects/chicha/chicha_1.jpg">
+                <img src="images/projects/chicha/chicha_1.jpg" loading="lazy" decoding="async">
               </a>
             </figure>
 
@@ -155,6 +143,9 @@
       window.customElements.define('ids-gallery', IdsGallery);
     </script>
 
+      <script src="js/include-header.js"></script>
+      <script src="js/performance.js"></script>
+      <script src="js/lang-switcher.js"></script>
   </body>
 
 </html>

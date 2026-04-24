@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Travel – Nikita Nova</title>
+<link href="../images/icon.png" rel="icon" type="image/x-icon"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../css/colors.css" rel="stylesheet">
+<link href="../css/normalize.css" rel="stylesheet"/>
+<link href="../css/settings.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<link href="../css/ids.css" rel="stylesheet"/>
+<link href="../css/gallery.css" rel="stylesheet"/>
+<link href="../css/project.css" rel="stylesheet"/>
+</head>
+<body class="ids">
+<div id="site-header"></div>
+
+<main>
+<div class="ids__wrapper L">
+<h1>2025</h1>
+<div class="projects-grid">
+<div class="projects-grid-item">
+<a class="project-promo-link" href="">
+<div class="project-promo" data-bg="../images/projects-promo/soon-cover.avif">
+<h2>Kronstadt</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="kazan.html">
+<div class="project-promo" data-bg="../images/travels/covers/kazan-cover.jpg">
+<h2>Kazan</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="pushkin.html">
+<div class="project-promo" data-bg="../images/travels/covers/pushlin-cover.jpeg">
+<h2>Pushkin</h2>
+</div>
+</a>
+</div>
+</div>
+<div class="ids__space XL"></div>
+<h1>2024</h1>
+<div class="projects-grid">
+<div class="projects-grid-item">
+<a class="project-promo-link" href="veliky-novgorod.html">
+<div class="project-promo" data-bg="../images/travels/covers/veliky-novgorod-cover.jpg">
+<h2>Veliky Novgorod</h2>
+</div>
+</a>
+</div>
+&lt;div class="projects-grid-item"&gt;
+            &lt;a class="project-promo-link" href=""&gt;
+              &lt;div class="project-promo" data-bg="images/projects-promo/soon-cover.avif"&gt;
+                &lt;h2&gt;Nizhny Novgorod&lt;/h2&gt;
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class="projects-grid-item"&gt;
+            &lt;a class="project-promo-link" href=""&gt;
+              &lt;div class="project-promo" data-bg="images/projects-promo/soon-cover.avif"&gt;
+                &lt;h2&gt;Vyborg&lt;/h2&gt;
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
+</div>
+</div></main>
+<footer>
+<div><a href="about.html">About me</a></div>
+<div><a href="https://t.me/nikita_nova">Write</a></div>
+<div><a href="mailto:i@nikitanova.ru">i@nikitanova.ru</a></div>
+<div><a href="https://t.me/+Z1nNM8tF_6E1YTli">Telegram</a></div>
+<div><a href="https://www.youtube.com/@Nikitanova">YouTube</a></div>
+</footer>
+<script>
+      let observer = new IntersectionObserver((elements)=>{
+        elements.forEach((el) => {
+          if(el.intersectionRatio > .3) {
+            el.target.classList.remove("sleep");
+          } else {
+            el.target.classList.add("sleep");
+          }
+        })
+      }, {threshold: [0, .5]});
+
+      document.querySelectorAll('.awake').forEach(el => {
+        observer.observe(el);
+      })
+    </script>
+<script src="../js/include-header.js"></script>
+<script src="../js/performance.js"></script>
+<script src="../js/lang-switcher.js"></script>
+</body>
+</html>

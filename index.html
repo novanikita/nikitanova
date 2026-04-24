@@ -13,38 +13,79 @@
     <link rel="stylesheet" href="css/ids.css" />
     <link rel="stylesheet" href="css/gallery.css" />
     <link rel="stylesheet" href="css/project.css" />
-
   </head>
 
   <body class="ids">
-    <div class="main-page">   
-      <header style="justify-content: space-between">
-        <div class="main-page-header">
-          <h1 class="S">Никитá Новá — дизайнер.</h1>
-          <h1 class="S"> 
-            <a href="portfolio.html">Портфолио</a>, <a href="video.html">видео</a> и&nbsp;<a href="articles.html">заметки</a> про дизайн.
-          </h1> 
-        </div>
-        <div class="main-page-nav">
-          <div class="list"><a href="about.html">Обо мне</a></div>
-          <div><a href="design-sunday.html">Дизайн-воскресенье</a></div>
-          <div><a href="consultation.html">Консультации</a></div>
-          <!--<div><a href="mailto:i@nikitanova.ru">i@nikitanova.ru</a></div>-->
-          <div><a href="https://t.me/+Z1nNM8tF_6E1YTli">Телеграм</a></div>
-          <div><a href="https://www.youtube.com/@Nikitanova">Ютуб</a></div>
-          <!--<div><a href="travels.html">Путешествия</a></div>-->
-          <!--<div><a href="https://t.me/nikita_nova">Написать</a></div>-->
-        </div>
-      </header>
-    </div>
-
-  </div>
+    <div id="site-header"></div>
     <main>
-      <video id="background-video" autoplay muted loop>
+      <canvas id="background-canvas" aria-hidden="true"></canvas>
+      <video id="background-video" autoplay muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback tabindex="-1" aria-hidden="true">
         <source src="video/website-video.mp4" type="video/mp4">
         Ваш браузер не поддерживает HTML5 видео.
       </video>
     </main>
+    <script>
+      (function () {
+        const video = document.getElementById("background-video");
+        const canvas = document.getElementById("background-canvas");
+        const ctx = canvas.getContext("2d");
+        if (!video || !canvas || !ctx) return;
+
+        function getCanvasHeight(viewportHeight) {
+          return window.matchMedia("(max-width: 768px)").matches
+            ? viewportHeight * 0.75
+            : viewportHeight;
+        }
+
+        function getCanvasTop(viewportHeight) {
+          return window.matchMedia("(max-width: 768px)").matches
+            ? viewportHeight * 0.25
+            : 0;
+        }
+
+        function resizeCanvas() {
+          const width = window.innerWidth;
+          const viewportHeight = window.innerHeight;
+          const height = getCanvasHeight(viewportHeight);
+
+          canvas.width = width;
+          canvas.height = height;
+          canvas.style.top = getCanvasTop(viewportHeight) + "px";
+        }
+
+        function drawCoverFrame() {
+          if (!video.videoWidth || !video.videoHeight) return;
+
+          const scale = Math.max(
+            canvas.width / video.videoWidth,
+            canvas.height / video.videoHeight
+          );
+
+          const drawWidth = video.videoWidth * scale;
+          const drawHeight = video.videoHeight * scale;
+          const offsetX = (canvas.width - drawWidth) / 2;
+          const offsetY = (canvas.height - drawHeight) / 2;
+
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(video, offsetX, offsetY, drawWidth, drawHeight);
+        }
+
+        function renderLoop() {
+          drawCoverFrame();
+          requestAnimationFrame(renderLoop);
+        }
+
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+        video.addEventListener("loadeddata", function () {
+          video.play().catch(function () {});
+          renderLoop();
+        });
+      })();
+    </script>
+      <script src="js/include-header.js"></script>
+      <script src="js/performance.js"></script>
+      <script src="js/lang-switcher.js"></script>
   </body>
 
 </html>

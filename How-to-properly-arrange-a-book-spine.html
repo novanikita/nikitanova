@@ -17,18 +17,7 @@
   </head>
 
   <body class="ids">
-    <header>
-      <div class="logo">
-        <a href="index.html">← Никита Нова</a>
-      </div>
-      <div class="nav">
-        <div class="nav-item">
-          <a href="articles.html">Статьи про дизайн</a>
-        </div>
-        <div class="nav-item">
-          <p>Про книжный корешок</p>
-        </div>
-    </header>
+    <div id="site-header"></div>
 
   </div>
     <main>
@@ -43,11 +32,11 @@
         <h2>Две традиции</h2>
         <p>Для&nbsp;начала нужно понимать: есть две типографские традиции: русская и&nbsp;европейская. Для&nbsp;европейской характерно оформлять корешок начиная сверху, поэтому прочитать его можно, наклонив голову направо.</p>
         <div class="ids__space S"></div>  
-        <img src="images/article/book-1.jpg" alt="варианты европейского корешка">
+        <img src="images/article/book-1.jpg" alt="варианты европейского корешка" loading="lazy" decoding="async">
         <div class="ids__space S"></div>  
         <p>В&nbsp;русской традиции название пишут снизу вверх, поэтому прочитать его можно, наклонив голову налево.</p>
         <div class="ids__space S"></div>  
-        <img src="images/article/book-2.jpg" alt="варианты европейского корешка">
+        <img src="images/article/book-2.jpg" alt="варианты европейского корешка" loading="lazy" decoding="async">
         <div class="ids__space S"></div>  
         <p>Это более удобочитаемо. Более того: не&nbsp;наклоняя голову, а&nbsp;смотря на&nbsp;книжную полку прямо, мы с&nbsp;большей вероятностью прочитаем тот корешок, который оформлен в&nbsp;русской традиции.</p>
         <div class="ids__space M"></div>
@@ -157,6 +146,9 @@
       window.customElements.define('ids-gallery', IdsGallery);
     </script>
 
+      <script src="js/include-header.js"></script>
+      <script src="js/performance.js"></script>
+      <script src="js/lang-switcher.js"></script>
   </body>
 
 </html>

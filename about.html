@@ -16,23 +16,14 @@
   </head>
 
   <body class="ids">
-    <header>
-      <div class="logo">
-        <a href="index.html">← Никита Нова</a>
-      </div>
-      <div class="nav">
-        <div class="nav-item">
-          <p>Обо мне</p>
-        </div>
-      </div>
-    </header>
+    <div id="site-header"></div>
 
   </div>
     <main>
       <div class="ids__wrapper S">
         <div class="ids__space XL"></div>
         <h1>Меня правда зовут Никита.<br> И&nbsp;фамилия Нова.</h1>
-        <h1>Я — дизайнер с&nbsp;опытом менеджера, редактора, верстальщика, сценариста и&nbsp;арт&#8209директора</h1>
+        <h1>Я — дизайнер с&nbsp;опытом менеджера, редактора, програмиста, сценариста и&nbsp;арт&#8209директора</h1>
         <h1>Живу эту жизнь через любопытство, драйв исследования нового и&nbsp;честность</h1>
         <i>Работаю дизайнером с&nbsp;2019&nbsp;года</i> 
         <div class="ids__space L"></div> 
@@ -50,7 +41,7 @@
           <li>Готовить макеты с печати, вышивкам и другим способам производства</li>
           <li>Работать с нейросетями для иллюстраций, текста видео, 3д, анимации</li>
           <li>Тренировать ии-модели для создания новых стилей</li>
-          <li>(Пока не умею, но уже учу JavaScript)</li>
+          <li>Кодить скрипты, сайты и приложения</li>
         </ul>
         <p>Вот такой я&nbsp;человек ¯\_(ツ)_/¯</p>
         <div class="ids__space L"></div>
@@ -488,62 +479,62 @@
         <ids-gallery>
           <figure>
             <a href="images/about/about-2.avif">
-              <img src="images/about/about-2.avif">
+              <img src="images/about/about-2.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-5.avif">
-              <img src="images/about/about-5.avif">
+              <img src="images/about/about-5.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-6.avif">
-              <img src="images/about/about-6.avif">
+              <img src="images/about/about-6.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-7.avif">
-              <img src="images/about/about-7.avif">
+              <img src="images/about/about-7.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-8.avif">
-              <img src="images/about/about-8.avif">
+              <img src="images/about/about-8.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-9.avif">
-              <img src="images/about/about-9.avif">
+              <img src="images/about/about-9.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-10.avif">
-              <img src="images/about/about-10.avif">
+              <img src="images/about/about-10.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-11.avif">
-              <img src="images/about/about-11.avif">
+              <img src="images/about/about-11.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-12.avif">
-              <img src="images/about/about-12.avif">
+              <img src="images/about/about-12.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-13.avif">
-              <img src="images/about/about-13.avif">
+              <img src="images/about/about-13.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-15.avif">
-              <img src="images/about/about-15.avif">
+              <img src="images/about/about-15.avif" loading="lazy" decoding="async">
             </a>
           </figure>
           <figure>
             <a href="images/about/about-16.avif">
-              <img src="images/about/about-16.avif">
+              <img src="images/about/about-16.avif" loading="lazy" decoding="async">
             </a>
           </figure>
         </ids-gallery>
@@ -639,6 +630,9 @@
       window.customElements.define('ids-gallery', IdsGallery);
     </script>
 
+      <script src="js/include-header.js"></script>
+      <script src="js/performance.js"></script>
+      <script src="js/lang-switcher.js"></script>
   </body>
 
 </html>

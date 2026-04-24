@@ -18,20 +18,7 @@
   </head>
 
   <body class="ids">
-    <header>
-      <div class="logo">
-        <a href="index.html">← Никита Нова</a>
-      </div>
-      <div class="nav">
-        <div class="nav-item">
-          <a href="portfolio.html">Путешествия</a>
-        </div>
-        <div class="nav-item">
-          <p>Пушкин</p>
-        </div>
-
-      </div>
-    </header>
+    <div id="site-header"></div>
   </div>
 
   <main>
@@ -51,94 +38,94 @@
           <ids-gallery>
             <figure>
               <a href="images/travels/pushkin/pushkin-1.jpeg">
-                <img src="images/travels/pushkin/pushkin-1.jpeg">
+                <img src="images/travels/pushkin/pushkin-1.jpeg" loading="lazy" decoding="async">
               </a>
             </figure>
             <figure>
               <a href="images/travels/pushkin/pushkin-2.jpeg">
-                <img src="images/travels/pushkin/pushkin-2.jpeg">
+                <img src="images/travels/pushkin/pushkin-2.jpeg" loading="lazy" decoding="async">
               </a>
             </figure>
 
             <figure>
               <a href="images/travels/pushkin/pushkin-3.jpeg">
-                <img src="images/travels/pushkin/pushkin-3.jpeg">
+                <img src="images/travels/pushkin/pushkin-3.jpeg" loading="lazy" decoding="async">
               </a>
               <p class="caption">Последний раз пиццу на тарелочке с вензелями я ела на Дне Рождении у бабушки</p>
             </figure>
 
             <figure>
               <a href="images/travels/pushkin/pushkin-4.jpeg">
-                <img src="images/travels/pushkin/pushkin-4.jpeg">
+                <img src="images/travels/pushkin/pushkin-4.jpeg" loading="lazy" decoding="async">
               </a>
               <p class="caption">В Пушкине всё хорошо с едой. Есть несколько приятных ресторанов как-будто в Питере. В целом, колличество приятных мест позволяет все 3-4 раза за день поесть в разных местах</p>
             </figure>
             <figure>
               <a href="images/travels/pushkin/pushkin-5.jpeg">
-                <img src="images/travels/pushkin/pushkin-5.jpeg">
+                <img src="images/travels/pushkin/pushkin-5.jpeg" loading="lazy" decoding="async">
               </a>
               <p class="caption">С дизайном в городе, к сожалению, всё очень плохо</p>
             </figure>
 
             <figure>
               <a href="images/travels/pushkin/pushkin-6.jpeg">
-                <img src="images/travels/pushkin/pushkin-6.jpeg">
+                <img src="images/travels/pushkin/pushkin-6.jpeg" loading="lazy" decoding="async">
               </a>
               <p class="caption">Красивыми тут получаются только случайные вещи. Как эта будка, например</p>
             </figure>
 
             <figure>
               <a href="images/travels/pushkin/pushkin-7.jpeg">
-                <img src="images/travels/pushkin/pushkin-7.jpeg">
+                <img src="images/travels/pushkin/pushkin-7.jpeg" loading="lazy" decoding="async">
               </a>
               <p class="caption">Или вот такие графичные деревья</p>
             </figure>
 
             <figure>
               <a href="images/travels/pushkin/pushkin-8.jpeg">
-                <img src="images/travels/pushkin/pushkin-8.jpeg">
+                <img src="images/travels/pushkin/pushkin-8.jpeg" loading="lazy" decoding="async">
               </a>
             </figure>
 
             <figure>
               <a href="images/travels/pushkin/pushkin-9.jpeg">
-                <img src="images/travels/pushkin/pushkin-9.jpeg">
+                <img src="images/travels/pushkin/pushkin-9.jpeg" loading="lazy" decoding="async">
               </a>
             </figure>
 
             <figure>
               <a href="images/travels/pushkin/pushkin-10.jpeg">
-                <img src="images/travels/pushkin/pushkin-10.jpeg">
+                <img src="images/travels/pushkin/pushkin-10.jpeg" loading="lazy" decoding="async">
               </a>
               <p class="caption">Весь Пушкин собственно вот такой: спокойный, незаметный, тихий. Для путешественника никакой в общем-то. Но я уверена местные жители от этого и кайфуют</p>
             </figure>
             <figure>
               <a href="images/travels/pushkin/pushkin-11.jpeg">
-                <img src="images/travels/pushkin/pushkin-11.jpeg">
+                <img src="images/travels/pushkin/pushkin-11.jpeg" loading="lazy" decoding="async">
               </a>
             </figure> 
 
             <figure>
               <a href="images/travels/pushkin/pushkin-12.jpeg">
-                <img src="images/travels/pushkin/pushkin-12.jpeg">
+                <img src="images/travels/pushkin/pushkin-12.jpeg" loading="lazy" decoding="async">
               </a>
             </figure>
 
             <figure>
               <a href="images/travels/pushkin/pushkin-13.jpeg">
-                <img src="images/travels/pushkin/pushkin-13.jpeg">
+                <img src="images/travels/pushkin/pushkin-13.jpeg" loading="lazy" decoding="async">
               </a>
               <p class="caption">Впервые вижу, что такой отдел существует. Интересно</p>
             </figure>
 
             <figure>
               <a href="images/travels/pushkin/pushkin-15.jpeg">
-                <img src="images/travels/pushkin/pushkin-15.jpeg">
+                <img src="images/travels/pushkin/pushkin-15.jpeg" loading="lazy" decoding="async">
               </a>
             </figure>
             <figure>
               <a href="images/travels/pushkin/pushkin-16.jpeg">
-                <img src="images/travels/pushkin/pushkin-16.jpeg">
+                <img src="images/travels/pushkin/pushkin-16.jpeg" loading="lazy" decoding="async">
               </a>
             </figure>
           </ids-gallery>
@@ -240,6 +227,9 @@
       window.customElements.define('ids-gallery', IdsGallery);
     </script>
 
+      <script src="js/include-header.js"></script>
+      <script src="js/performance.js"></script>
+      <script src="js/lang-switcher.js"></script>
   </body>
 
 </html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Design Sunday - Nikita Nova</title>
+<link href="../images/icon.png" rel="icon" type="image/x-icon"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="../css/colors.css" rel="stylesheet">
+<link href="../css/normalize.css" rel="stylesheet"/>
+<link href="../css/settings.css" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<link href="../css/ids.css" rel="stylesheet"/>
+<link href="../css/gallery.css" rel="stylesheet"/>
+<link href="../css/project.css" rel="stylesheet"/>
+</head>
+<body class="ids">
+<div id="site-header"></div>
+
+<main>
+<div class="ids__wrapper L">
+<div class="projects-grid">
+<div class="projects-grid-item L">
+<h2>— this is an offline event where we walk → look at real world design → do better together</h2>
+</div>
+<div class="projects-grid-item L">
+<a class="project-promo-link" href="3-design-sunday.html">
+<div class="project-promo" data-bg="../images/d-s/cover/3-meet.jpg">
+<h2>No. 3 St. Petersburg 07/20/2025</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item L">
+<a class="project-promo-link" href="2-design-sunday.html">
+<div class="project-promo" data-bg="../images/d-s/cover/2-meet.jpg">
+<h2>No. 2 Moscow 06/22/2025</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item L">
+<a class="project-promo-link" href="1-design-sunday.html">
+<div class="project-promo" data-bg="../images/d-s/cover/1-meet.jpg">
+<h2>No. 1 Moscow 06/15/2025</h2>
+</div>
+</a>
+</div>
+</div>
+</div>
+<!-- <div class="ids__wrapper wide">
+        <div class="section">
+          <ids-gallery>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.avif">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.avif" alt="bulbasaur" loading="lazy" decoding="async">
+              </a>
+            </figure>
+            <figure>
+              <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.avif"
+                 data-pswp-width="960"
+                 data-pswp-height="960"
+              >
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.avif" alt="ivysaur" loading="lazy" decoding="async">
+              </a>
+            </figure>
+
+          </ids-gallery>
+        </div>
+        <div class="ids__space XL"></div>
+      </div> -->
+</main>
+<footer>
+<div><a href="about.html">About me</a></div>
+<div><a href="https://t.me/nikita_nova">Write</a></div>
+<div><a href="mailto:i@nikitanova.ru">i@nikitanova.ru</a></div>
+<div><a href="https://t.me/+Z1nNM8tF_6E1YTli">Telegram</a></div>
+<div><a href="https://www.youtube.com/@Nikitanova">YouTube</a></div>
+</footer>
+<script>
+      let observer = new IntersectionObserver((elements)=>{
+        elements.forEach((el) => {
+          if(el.intersectionRatio > .3) {
+            el.target.classList.remove("sleep");
+          } else {
+            el.target.classList.add("sleep");
+          }
+        })
+      }, {threshold: [0, .5]});
+
+      document.querySelectorAll('.awake').forEach(el => {
+        observer.observe(el);
+      })
+    </script>
+<script src="../js/include-header.js"></script>
+<script src="../js/performance.js"></script>
+<script src="../js/lang-switcher.js"></script>
+</body>
+</html>
