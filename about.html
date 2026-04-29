@@ -55,12 +55,90 @@
             <thead>
               <tr>
                 <th width="15%">Год</th>
-                <th width="30%">Проект (67)</th>
+                <th width="30%" id="projects-count-header">Проект</th>
                 <th width="30%">Роль</th>
                 <th width="30%">Направление</th>
               </tr>
             </thead>
             <tbody>
+              <tr>
+                <td>2026</td>
+                <td>Разработка скрипта для сортировки фото Photosort</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Промо-кампания для Wibes</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Разработка и брендинг для сервиса Design Atlas</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Разработка и брендинг для сервиса Plate</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Разработка и брендинг для сервиса Oneweek</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Сайт для студии flowerdog</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Чехол А</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Календарь на 2026 год</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Промо-кампания для студии Дуга</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Ребрендинг для девелопера Энко</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Брендинг для квартала Нагория</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>Лендинг для промо-кампании новой функции Яндекс.Директа</td>
+                <td>Инициатор, сценарист</td>
+                <td>Сайты</td>
+              </tr>
+              <tr>
+                <td>2026</td>
+                <td>История про дизайн «Почему ИИ это пузырь?»</td>
+                <td>Инициатор, сценарист</td>
+                <td>Медиа</td>
+              </tr>
               <tr>
                 <td>2025</td>
                 <td>История про дизайн «Зачем бренды делают концепты»</td>
@@ -629,6 +707,19 @@
 
       window.customElements.define('ids-gallery', IdsGallery);
     </script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const table = document.querySelector('.custom-table');
+          const projectsHeader = document.getElementById('projects-count-header');
+          if (!table || !projectsHeader) {
+            return;
+          }
+
+          const projectsCount = table.querySelectorAll('tbody tr').length;
+          projectsHeader.textContent = `Проект (${projectsCount})`;
+        });
+      </script>
 
       <script src="js/include-header.js"></script>
       <script src="js/performance.js"></script>

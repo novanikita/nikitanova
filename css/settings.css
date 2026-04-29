@@ -4,20 +4,6 @@
 
 /* Fonts */
 
-/* @font-face {
-  font-family: "Arial";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url('fonts/Arial.woff2') format("woff2");
-}
-
-body {
-  font-family: "Arial";
-  -webkit-font-smoothing: antialiased;
-  font-weight: 400;
-} */
-
 @font-face {
   font-family: "ProtoGrotesk";
   src: url("../fonts/ProtoGrotesk.woff2") format("woff2");
@@ -31,22 +17,6 @@ body {
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
 }
-
-/* @font-face {
-  font-family: "Stapel";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url('fonts/Stapel.woff2') format("woff2");
-}
-
-body {
-  font-family: "Stapel";
-  -webkit-font-smoothing: antialiased;
-  font-weight: 400;
-} */
-
-
 
 /* Density */
 

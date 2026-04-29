@@ -19,7 +19,68 @@
 
 <main>
 <div class="ids__wrapper L">
+<div class="ids__space L"></div>
+<div class="portfolio-description">
+<h1 class="S">In 7 years of work I made <code data-tag-name="website"></code>, <code data-tag-name="promo campaign"></code>, <code data-tag-name="clothing drop"></code>, <code data-tag-name="industrial design"></code>, <code data-tag-name="graphics"></code>, <code data-tag-name="packaging"></code>, <code data-tag-name="navigation"></code>, <code data-tag-name="branding"></code>, <code data-tag-name="illustration"></code>, <code data-tag-name="book"></code>, <code data-tag-name="app"></code></h1>
+</div>
+<div class="ids__space S"></div>
 <div class="projects-grid">
+<div class="projects-grid-item XL">
+<a class="project-promo-link" href="">
+<div class="project-promo" data-bg="../images/projects-promo/soon-cover.avif">
+<h2>Flowerdog website</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="">
+<div class="project-promo" data-bg="../images/projects-promo/soon-cover.avif">
+<h2>Oneweek</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="">
+<div class="project-promo" data-bg="../images/projects-promo/soon-cover.avif">
+<h2>Plate</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="">
+<div class="project-promo" data-bg="../images/projects-promo/soon-cover.avif">
+<h2>Design Atals</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item L">
+<a class="project-promo-link" href="">
+<div class="project-promo" data-bg="../images/projects-promo/soon-cover.avif">
+<h2>Promo campaign for Wibes</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item L">
+<a class="project-promo-link" href="">
+<div class="project-promo" data-bg="../images/projects-promo/soon-cover.avif">
+<h2>Landing for Yandex Direct</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="">
+<div class="project-promo" data-bg="../images/projects-promo/soon-cover.avif">
+<h2>Drop “Ever dream this cat”</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="">
+<div class="project-promo" data-bg="../images/projects-promo/soon-cover.avif">
+<h2>Calendar for 2026</h2>
+</div>
+</a>
+</div>
 <div class="projects-grid-item L">
 <a class="project-promo-link" href="commo.html">
 <div class="project-promo" data-bg="../images/projects-promo/commo-cover.jpg">
@@ -108,6 +169,13 @@
 <a class="project-promo-link" href="essay.html">
 <div class="project-promo" data-bg="../images/projects-promo/essay-cover.avif">
 <h2>Book series “Epoch Defining Essays”</h2>
+</div>
+</a>
+</div>
+<div class="projects-grid-item">
+<a class="project-promo-link" href="">
+<div class="project-promo" data-bg="../images/projects-promo/soon-cover.avif">
+<h2>ONS club</h2>
 </div>
 </a>
 </div>
@@ -415,14 +483,313 @@
         <div class="ids__space XL"></div>
       </div> -->
 </main>
-<footer>
-<div><a href="about.html">About me</a></div>
-<div><a href="https://t.me/nikita_nova">Write</a></div>
-<div><a href="mailto:i@nikitanova.ru">i@nikitanova.ru</a></div>
-<div><a href="https://t.me/+Z1nNM8tF_6E1YTli">Telegram</a></div>
-<div><a href="https://www.youtube.com/@Nikitanova">YouTube</a></div>
+<footer class="portfolio-footer">
+<div class="portfolio-footer__copy">Nikita Nova 2002 → 2026</div>
+<div class="portfolio-footer__cat">
+<img src="../cat-1.png" alt="" aria-hidden="true"/>
+</div>
+<div class="portfolio-footer__right">
+<nav class="main-page-nav portfolio-footer__menu" aria-label="Footer navigation">
+<a href="https://www.youtube.com/@Nikitanova">YouTube</a>
+<a href="https://t.me/+Z1nNM8tF_6E1YTli">TG channel</a>
+<a href="https://t.me/nikita_nova">Write</a>
+</nav>
+<div class="language-switcher portfolio-footer__lang" aria-label="Language switcher">
+<a href="#" data-lang="ru">РУ</a>
+<a href="#" data-lang="en">EN</a>
+</div>
+</div>
 </footer>
 <script>
+      const projectTagByTitle = {
+        "Flowerdog website": "website",
+        "Oneweek": "website",
+        "Plate": "website",
+        "Design Atals": "website",
+        "Promo campaign for Wibes": "promo campaign",
+        "Landing for Yandex Direct": "website",
+        "Drop “Ever dream this cat”": "clothing drop",
+        "Calendar for 2026": "graphics",
+        "Packaging for Commo": "packaging",
+        "Generative wallpaper for Dodo Pizza": "graphics",
+        "Promotional campaign for Vkusville": "promo campaign",
+        "Rebranding of the film “Mid 90s”": "branding",
+        "Packaging for Dodo Pizza in Dubai": "packaging",
+        "Rebranding of Dodo Pizza": "branding",
+        "Posters with Chicha": "graphics",
+        "Book \"Street Wave\"": "book",
+        "Video about slavery “06.06”": "graphics",
+        "Mural No. 1": "graphics",
+        "Book “Storytelling of the Nenets Malitsa”": "book",
+        "Drop “First letter of the alphabet No. 6”": "clothing drop",
+        "Book series “Epoch Defining Essays”": "book",
+        "ONS club": "illustration",
+        "Weather app": "app",
+        "Dodo Auto": "graphics",
+        "Dodo truck decoration": "graphics",
+        "Website for TV menu in Dodo pizzerias": "website",
+        "Drop “First letter of the alphabet” No. 1": "clothing drop",
+        "Paddling pool": "illustration",
+        "Metro map for St. Petersburg": "navigation",
+        "Rebranding of the Kirovets stadium": "branding",
+        "Advertising campaign for Aviasales": "promo campaign",
+        "Furniture line “Alien”": "industrial design",
+        "Series of illustrations “Ate Grandfather”": "illustration",
+        "Holiday posters for Dodo": "promo campaign",
+        "Meme Park reports": "website",
+        "Interior posters for Dodo Pizza": "graphics",
+        "Logo for Dodo Kidza": "branding",
+        "Navigation for the interiors of Dodo pizzerias": "navigation",
+        "Drop “First letter of the alphabet” No. 3": "clothing drop",
+        "HR promotional campaign for Dodo": "promo campaign",
+        "Promotional campaign Dodo Appa": "promo campaign",
+        "Security sign": "graphics",
+        "Drop “First letter of the alphabet” No. 4": "clothing drop",
+        "A × 100": "lettering",
+        "Branding for a workshop at Gymnasium No. 631": "branding",
+        "Address plate for St. Petersburg": "graphics",
+        "Application for observing emotions “Aura”": "app",
+        "Book \"60\"": "book",
+        "Logo for Crypto Futures": "branding",
+        "Drop “First letter of the alphabet” No. 5": "clothing drop",
+        "Cover of the book “Dodo from the Basement to the Billion”": "graphics",
+        "Lettering for Bureau Zarya": "lettering",
+        "Maps for the film": "graphics",
+        "Game gallery logo": "graphics",
+        "Elafix branding": "branding",
+        "Elafix posters": "graphics",
+        "Pattern for \"News\"": "graphics",
+        "Drop “First letter of the alphabet” No. 2": "clothing drop",
+        "Sap Union logo": "graphics",
+        "Website \"Slavyarik\"": "website",
+        "Lettering for the staff room": "lettering",
+        "Sign at the entrance": "graphics"
+      };
+
+      const tags = ["website", "promo campaign", "clothing drop", "industrial design", "graphics", "packaging", "navigation", "branding", "illustration", "book", "app", "lettering"];
+      const tagCounts = Object.fromEntries(tags.map((tag) => [tag, 0]));
+      const tagForms = {
+        "website": ["website", "websites", "websites"],
+        "promo campaign": ["promo campaign", "promo campaigns", "promo campaigns"],
+        "clothing drop": ["clothing drop", "clothing drops", "clothing drops"],
+        "industrial design": ["industrial design project", "industrial design projects", "industrial design projects"],
+        "graphics": ["graphics project", "graphics projects", "graphics projects"],
+        "packaging": ["packaging project", "packaging projects", "packaging projects"],
+        "navigation": ["navigation project", "navigation projects", "navigation projects"],
+        "branding": ["branding project", "branding projects", "branding projects"],
+        "illustration": ["illustration", "illustrations", "illustrations"],
+        "book": ["book", "books", "books"],
+        "app": ["app", "apps", "apps"],
+        "lettering": ["lettering project", "lettering projects", "lettering projects"]
+      };
+
+      const normalizeProjectTitle = (text) => text.replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim();
+      const pluralFormIndex = (count) => (count === 1 ? 0 : 1);
+
+      const desiredOrder = [
+        "Flowerdog website",
+        "Oneweek",
+        "Plate",
+        "Design Atals",
+        "Promo campaign for Wibes",
+        "Landing for Yandex Direct",
+        "Drop “Ever dream this cat”",
+        "Calendar for 2026",
+        "Maps for the film",
+        "Drop “First letter of the alphabet No. 6”",
+        "Lettering for Bureau Zarya",
+        "A × 100",
+        "Drop “First letter of the alphabet” No. 5",
+        "Address plate for St. Petersburg",
+        "Drop “First letter of the alphabet” No. 4",
+        "Security sign",
+        "Drop “First letter of the alphabet” No. 3",
+        "Sign at the entrance",
+        "Cover of the book “Dodo from the Basement to the Billion”",
+        "Pattern for \"News\"",
+        "Packaging for Commo",
+        "Dodo truck decoration",
+        "Holiday posters for Dodo",
+        "Website for TV menu in Dodo pizzerias",
+        "Generative wallpaper for Dodo Pizza",
+        "Dodo Auto",
+        "Meme Park reports",
+        "Interior posters for Dodo Pizza",
+        "Advertising campaign for Aviasales",
+        "Drop “First letter of the alphabet” No. 2",
+        "Lettering for the staff room",
+        "Navigation for the interiors of Dodo pizzerias",
+        "Drop “First letter of the alphabet” No. 1",
+        "Promotional campaign for Vkusville",
+        "Posters with Chicha",
+        "HR promotional campaign for Dodo",
+        "Rebranding of Dodo Pizza",
+        "Promotional campaign Dodo Appa",
+        "Paddling pool",
+        "Packaging for Dodo Pizza in Dubai",
+        "Logo for Dodo Kidza",
+        "Logo for Crypto Futures",
+        "Website \"Slavyarik\"",
+        "Rebranding of the film “Mid 90s”",
+        "Book \"60\"",
+        "Video about slavery “06.06”",
+        "Furniture line “Alien”",
+        "Book \"Street Wave\"",
+        "Weather app",
+        "Metro map for St. Petersburg",
+        "Game gallery logo",
+        "Book series “Epoch Defining Essays”",
+        "ONS club",
+        "Branding for a workshop at Gymnasium No. 631",
+        "Sap Union logo",
+        "Book “Storytelling of the Nenets Malitsa”",
+        "Application for observing emotions “Aura”",
+        "Mural No. 1",
+        "Rebranding of the Kirovets stadium",
+        "Series of illustrations “Ate Grandfather”",
+        "Elafix posters",
+        "Elafix branding"
+      ];
+
+      const classOverrides = {
+        "Flowerdog website": "XL",
+        "Oneweek": "L",
+        "Promo campaign for Wibes": "L",
+        "Landing for Yandex Direct": "L",
+        "Maps for the film": "L",
+        "Drop “First letter of the alphabet” No. 3": "L",
+        "Cover of the book “Dodo from the Basement to the Billion”": "L",
+        "Pattern for \"News\"": "L",
+        "Packaging for Commo": "L",
+        "Dodo truck decoration": "L",
+        "Generative wallpaper for Dodo Pizza": "XL",
+        "Meme Park reports": "L",
+        "Promotional campaign for Vkusville": "L",
+        "Rebranding of Dodo Pizza": "XL",
+        "Promotional campaign Dodo Appa": "L",
+        "Packaging for Dodo Pizza in Dubai": "L",
+        "Website \"Slavyarik\"": "L",
+        "Furniture line “Alien”": "L",
+        "Book \"Street Wave\"": "L",
+        "Branding for a workshop at Gymnasium No. 631": "L",
+        "Application for observing emotions “Aura”": "L",
+        "Mural No. 1": "L"
+      };
+
+      const specificBgOverrides = {
+        "Flowerdog website": "../images/projects-promo/flowerdog-cover.avif"
+      };
+
+      const grid = document.querySelector(".projects-grid");
+      const itemByTitle = new Map();
+      Array.from(grid.querySelectorAll(":scope > .projects-grid-item")).forEach((item) => {
+        const h2 = item.querySelector("h2");
+        if (!h2) return;
+        itemByTitle.set(normalizeProjectTitle(h2.textContent || ""), item);
+      });
+
+      desiredOrder.forEach((title) => {
+        const item = itemByTitle.get(title);
+        if (!item) return;
+
+        const sizeClass = classOverrides[title];
+        item.className = sizeClass ? `projects-grid-item ${sizeClass}` : "projects-grid-item";
+
+        const promo = item.querySelector(".project-promo");
+        if (promo && specificBgOverrides[title]) {
+          promo.setAttribute("data-bg", specificBgOverrides[title]);
+        }
+
+        grid.appendChild(item);
+      });
+
+      document.querySelectorAll(".projects-grid-item").forEach((item) => {
+        const titleElement = item.querySelector("h2");
+        if (!titleElement) return;
+        const normalizedTitle = normalizeProjectTitle(titleElement.textContent || "");
+        const tag = projectTagByTitle[normalizedTitle];
+        if (!tag) return;
+        item.dataset.tag = tag;
+        tagCounts[tag] += 1;
+      });
+
+      document.querySelectorAll("code[data-tag-name]").forEach((codeElement) => {
+        const tag = codeElement.dataset.tagName;
+        const count = tagCounts[tag] ?? 0;
+        const forms = tagForms[tag] || [tag, `${tag}s`, `${tag}s`];
+        const label = forms[pluralFormIndex(count)].replace(/ /g, "\u00A0");
+        codeElement.textContent = `${count}\u00A0${label}`;
+      });
+
+      const projectItems = Array.from(document.querySelectorAll(".projects-grid-item"));
+      const tagCodeElements = Array.from(document.querySelectorAll("code[data-tag-name]"));
+      let activeTag = null;
+
+      const renderTagFilter = () => {
+        projectItems.forEach((item) => {
+          const itemTag = item.dataset.tag;
+          const shouldShow = !activeTag || itemTag === activeTag;
+          item.classList.toggle("is-filtered-out", !shouldShow);
+        });
+
+        tagCodeElements.forEach((codeElement) => {
+          const isActive = codeElement.dataset.tagName === activeTag;
+          codeElement.classList.toggle("is-active", isActive);
+          codeElement.setAttribute("aria-pressed", String(isActive));
+        });
+      };
+
+      tagCodeElements.forEach((codeElement) => {
+        codeElement.setAttribute("role", "button");
+        codeElement.setAttribute("tabindex", "0");
+        codeElement.setAttribute("aria-pressed", "false");
+
+        const handleToggle = () => {
+          const tag = codeElement.dataset.tagName;
+          activeTag = activeTag === tag ? null : tag;
+          renderTagFilter();
+        };
+
+        codeElement.addEventListener("click", handleToggle);
+        codeElement.addEventListener("keydown", (event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          handleToggle();
+        });
+      });
+
+      const footerCatImage = document.querySelector(".portfolio-footer__cat img");
+      if (footerCatImage) {
+        const cat1 = "../cat-1.png";
+        const cat2 = "../cat-2.png";
+        const cat3 = "../cat-3.png";
+        const cat4 = "../cat-4.png";
+        const cat5 = "../cat-5.png";
+        const cat6 = "../cat-6.png";
+
+        footerCatImage.addEventListener("mousemove", (event) => {
+          const rect = footerCatImage.getBoundingClientRect();
+          const relativeX = event.clientX - rect.left;
+          const zone = relativeX / rect.width;
+
+          if (zone < 1 / 5) {
+            footerCatImage.src = cat2;
+          } else if (zone < 2 / 5) {
+            footerCatImage.src = cat3;
+          } else if (zone < 3 / 5) {
+            footerCatImage.src = cat4;
+          } else if (zone < 4 / 5) {
+            footerCatImage.src = cat5;
+          } else {
+            footerCatImage.src = cat6;
+          }
+        });
+
+        footerCatImage.addEventListener("mouseleave", () => {
+          footerCatImage.src = cat1;
+        });
+      }
+
       let observer = new IntersectionObserver((elements)=>{
         elements.forEach((el) => {
           if(el.intersectionRatio > .3) {
