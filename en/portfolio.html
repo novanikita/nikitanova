@@ -13,7 +13,20 @@
 <link href="../css/ids.css" rel="stylesheet"/>
 <link href="../css/gallery.css" rel="stylesheet"/>
 <link href="../css/project.css" rel="stylesheet"/>
-</head>
+    <meta name="description" content="Меня правда зовут Никита. Я дизайнер с опытом менеджера, редактора, програмиста, сценариста и арт‑директора" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="Никитá Новá" />
+    <meta property="og:title" content="Никитá Новá" />
+    <meta property="og:description" content="Меня правда зовут Никита. Я дизайнер с опытом менеджера, редактора, програмиста, сценариста и арт‑директора" />
+    <meta property="og:url" content="https://nikitanova.ru/en/portfolio.html" />
+    <meta property="og:image" content="https://nikitanova.ru/images/meta.png" />
+    <meta property="og:image:alt" content="Никитá Новá" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Никитá Новá" />
+    <meta name="twitter:description" content="Меня правда зовут Никита. Я дизайнер с опытом менеджера, редактора, програмиста, сценариста и арт‑директора" />
+    <meta name="twitter:image" content="https://nikitanova.ru/images/meta.png" />
+  </head>
 <body class="ids">
 <div id="site-header"></div>
 
@@ -483,23 +496,7 @@
         <div class="ids__space XL"></div>
       </div> -->
 </main>
-<footer class="portfolio-footer">
-<div class="portfolio-footer__copy">Nikita Nova 2002 → 2026</div>
-<div class="portfolio-footer__cat">
-<img src="../cat-1.png" alt="" aria-hidden="true"/>
-</div>
-<div class="portfolio-footer__right">
-<nav class="main-page-nav portfolio-footer__menu" aria-label="Footer navigation">
-<a href="https://www.youtube.com/@Nikitanova">YouTube</a>
-<a href="https://t.me/+Z1nNM8tF_6E1YTli">TG channel</a>
-<a href="https://t.me/nikita_nova">Write</a>
-</nav>
-<div class="language-switcher portfolio-footer__lang" aria-label="Language switcher">
-<a href="#" data-lang="ru">РУ</a>
-<a href="#" data-lang="en">EN</a>
-</div>
-</div>
-</footer>
+<footer id="site-footer"></footer>
 <script>
       const projectTagByTitle = {
         "Flowerdog website": "website",
@@ -758,8 +755,13 @@
         });
       });
 
-      const footerCatImage = document.querySelector(".portfolio-footer__cat img");
-      if (footerCatImage) {
+      function initFooterCatAnimation() {
+        const footerCatImage = document.querySelector(".portfolio-footer__cat img");
+        if (!footerCatImage || footerCatImage.dataset.catAnimationReady === "true") {
+          return;
+        }
+        footerCatImage.dataset.catAnimationReady = "true";
+
         const cat1 = "../cat-1.png";
         const cat2 = "../cat-2.png";
         const cat3 = "../cat-3.png";
@@ -789,6 +791,8 @@
           footerCatImage.src = cat1;
         });
       }
+      initFooterCatAnimation();
+      document.addEventListener("siteFooterLoaded", initFooterCatAnimation);
 
       let observer = new IntersectionObserver((elements)=>{
         elements.forEach((el) => {
