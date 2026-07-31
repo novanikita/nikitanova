@@ -755,45 +755,6 @@
         });
       });
 
-      function initFooterCatAnimation() {
-        const footerCatImage = document.querySelector(".portfolio-footer__cat img");
-        if (!footerCatImage || footerCatImage.dataset.catAnimationReady === "true") {
-          return;
-        }
-        footerCatImage.dataset.catAnimationReady = "true";
-
-        const cat1 = "../cat-1.png";
-        const cat2 = "../cat-2.png";
-        const cat3 = "../cat-3.png";
-        const cat4 = "../cat-4.png";
-        const cat5 = "../cat-5.png";
-        const cat6 = "../cat-6.png";
-
-        footerCatImage.addEventListener("mousemove", (event) => {
-          const rect = footerCatImage.getBoundingClientRect();
-          const relativeX = event.clientX - rect.left;
-          const zone = relativeX / rect.width;
-
-          if (zone < 1 / 5) {
-            footerCatImage.src = cat2;
-          } else if (zone < 2 / 5) {
-            footerCatImage.src = cat3;
-          } else if (zone < 3 / 5) {
-            footerCatImage.src = cat4;
-          } else if (zone < 4 / 5) {
-            footerCatImage.src = cat5;
-          } else {
-            footerCatImage.src = cat6;
-          }
-        });
-
-        footerCatImage.addEventListener("mouseleave", () => {
-          footerCatImage.src = cat1;
-        });
-      }
-      initFooterCatAnimation();
-      document.addEventListener("siteFooterLoaded", initFooterCatAnimation);
-
       let observer = new IntersectionObserver((elements)=>{
         elements.forEach((el) => {
           if(el.intersectionRatio > .3) {
